@@ -32,9 +32,9 @@
             "equals": "Microsoft.Dashboard/grafana"
           },
           {
-            "field": "Microsoft.Dashboard/grafana/enterpriseConfigurations",
-            "notEquals": "null"
-          }
+          "value": "[length(field('Microsoft.Dashboard/grafana/enterpriseConfigurations'))]",
+          "greater": 0
+        }
         ]
       },
       "then": {
